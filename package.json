@@ -3,9 +3,11 @@
 	"version": "1.0.0",
 	"description": "$desc",
 	"scripts": {
-		"test": "tsc -w",
+		"test": "tsc -w & karma start",
 		"lint": "eslint ./*.ts",
-		"compile": "tsc",
+		"compile-amd": "tsc -m amd -d false --outFile main.js",
+		"compile-cjs": "tsc",
+		"compile": "npm run compile-cjs && npm run compile-amd",
 		"build": "npm run lint && npm run compile"
 	},
 	"repository": {
@@ -39,10 +41,19 @@
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
 		"ava": "latest",
+		"chai": "latest",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-import": "latest",
+		"karma": "latest",
+		"karma-chai": "latest",
+		"karma-chrome-launcher": "latest",
+		"karma-mocha": "latest",
+		"karma-webpack": "latest",
+		"mocha": "latest",
 		"prettier": "latest",
-		"typescript": "next"
+		"typescript": "next",
+		"webpack": "latest",
+		"webpack-cli": "latest"
 	}
 }
