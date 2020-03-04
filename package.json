@@ -4,7 +4,7 @@
 	"description": "$desc",
 	"scripts": {
 		"test": "tsc -w & karma start",
-		"lint": "eslint ./*.ts",
+		"lint": "eslint ./src/*.ts",
 		"compile-amd": "tsc -m amd -d false --outFile main.js",
 		"compile-cjs": "tsc",
 		"compile": "npm run compile-cjs && npm run compile-amd",
@@ -14,7 +14,7 @@
 		"type": "git",
 		"url": "https://gitee.com/mmstudio/base"
 	},
-	"main": "index.js",
+	"main": "dist/index.js",
 	"keywords": [
 		"mm",
 		"mmstudio",
