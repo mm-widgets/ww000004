@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import t from './dist/index';
+import t from '../dist/index';
 
 describe('xxx', () => {
 	it('xxx', () => {
