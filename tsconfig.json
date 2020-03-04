@@ -33,6 +33,7 @@
 		"inlineSources": false,
 		"isolatedModules": false,
 		"lib": [
+			"dom",
 			"esnext"
 		],
 		"listFiles": false,
