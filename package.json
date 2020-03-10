@@ -1,17 +1,20 @@
 {
-	"name": "@mmstudio/base",
+	"name": "@mmstudio/widgets",
 	"version": "1.0.0",
-	"description": "$desc",
+	"description": "",
 	"scripts": {
-		"test": "npm run build && karma start --single-run",
-		"watch": "tsc -w & karma start",
+		"dev": "npm run watch-umd & gulp browser-sync-amd",
+		"ie": "npm run watch & webpack & gulp browser-sync-ie",
+		"test": "npm run dev",
+		"watch": "tsc -m commonjs -t esnext -w -p ./tests/tsconfig.json",
+		"watch-umd": "tsc -m umd -w -p ./tests/tsconfig.json",
 		"clean": "del-cli ./dist/",
 		"lint": "eslint ./src/**/*.ts",
 		"compile-amd": "tsc -m amd -d false --outFile ./dist/main.js",
 		"compile-cjs": "tsc",
 		"compile": "npm run compile-cjs && npm run compile-amd",
 		"build": "npm run lint && npm run compile",
-		"up": "git merge master"
+		"up": "git merge amd"
 	},
 	"repository": {
 		"type": "git",
@@ -39,21 +42,29 @@
 		}
 	],
 	"license": "MIT",
-	"dependencies": {},
+	"dependencies": {
+		"@mmstudio/on": "^1.0.202003041352"
+	},
 	"devDependencies": {
+		"@babel/core": "latest",
+		"@babel/plugin-transform-runtime": "latest",
+		"@babel/plugin-transform-typeof-symbol": "latest",
+		"@babel/preset-env": "latest",
+		"@babel/runtime": "latest",
+		"@dojo/loader": "^2.0.0",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
+		"babel-loader": "latest",
+		"browser-sync": "latest",
 		"chai": "latest",
 		"del-cli": "latest",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-import": "latest",
-		"karma": "latest",
-		"karma-chai": "latest",
-		"karma-chrome-launcher": "latest",
-		"karma-mocha": "latest",
-		"karma-webpack": "latest",
-		"mocha": "latest",
+		"gulp": "latest",
+		"gulp-shell": "latest",
+		"prompts": "latest",
+		"ts-loader": "latest",
 		"typescript": "next",
 		"webpack": "latest",
 		"webpack-cli": "latest"
