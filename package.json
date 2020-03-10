@@ -14,7 +14,7 @@
 		"compile-cjs": "tsc",
 		"compile": "npm run compile-cjs && npm run compile-amd",
 		"build": "npm run clean && npm run lint && npm run compile",
-		"up": "git merge amd"
+		"up": "git pull git@gitee.com:mmstudio/base.git widgets-web"
 	},
 	"repository": {
 		"type": "git",
