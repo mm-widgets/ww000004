@@ -1,28 +1,15 @@
-# Base
+# 控件
 
-## Projects
+<!-- TOC -->
 
-- amd
-	- on
-	- global
-	- web
-- cjs
-	- config
-	- invoke
-	- server
+- [属性](#属性)
+- [方法](#方法)
+- [示例](#示例)
 
-## Branches
+<!-- /TOC -->
 
-- amd
-	- tpl
-		- tpl-web
-		- tpl-wxapp
-		- tpl-mobile
-	- atom-web
-	- atom-wxapp
-	- widgets
-- cjs
-	- atom-nodejs
-	- atom-mobile
-	- widgets-mobile
-	- widgets-wxapp
+## 属性
+
+## 方法
+
+## 示例
