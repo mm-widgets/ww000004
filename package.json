@@ -11,8 +11,9 @@
 		"clean": "del-cli ./dist/",
 		"lint": "eslint ./src/**/*.ts",
 		"compile-amd": "tsc -m amd -d false --outFile ./dist/main.js",
-		"compile-cjs": "tsc",
-		"compile": "npm run compile-cjs && npm run compile-amd",
+		"compile-cjs": "tsc -m commonjs -d false",
+		"compile-esm": "tsc && mv ./dist/index.js ./dist/index.esm.js",
+		"compile": "npm run compile-esm && npm run compile-amd && npm run compile-cjs",
 		"build": "npm run clean && npm run lint && npm run compile",
 		"up": "git merge amd"
 	},
@@ -21,6 +22,8 @@
 		"url": "https://gitee.com/mmstudio/base"
 	},
 	"main": "dist/index.js",
+	"module": "dist/index.esm.js",
+	"types": "dist/index.d.ts",
 	"keywords": [
 		"mm",
 		"mmstudio",
