@@ -19,7 +19,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://gitee.com/mmstudio/base"
+		"url": "https://github.com/mm-tpl/widgets-web"
 	},
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
